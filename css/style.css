@@ -1,4 +1,9 @@
 /********** Template CSS **********/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif !important;
+}
 :root {
     --primary: #FEA116;
     --light: #F1F8FF;
@@ -200,6 +205,21 @@
     background: #FFFFFF;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
+}
+
+
+/*** Service ***/
+.service-item1 {
+    height: 420px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+    margin: 1rem;
 }
 
 .service-item:hover {

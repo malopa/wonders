@@ -58,6 +58,19 @@
         overflow: hidden;
         }
 
+
+        .container{
+            display: flex;
+        
+
+        }
+
+        @media screen and (max-width:768px){
+        .container{
+            flex-direction: column;
+
+        }
+        }
     </style>
 </head>
 
@@ -112,7 +125,13 @@
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link active">About</a>
-                                <a href="service.html" class="nav-item nav-link">Tours</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tour</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="kilimanjaro-route.html" class="dropdown-item">Kilimanjaro Routes</a>
+                                        <a href="meru-cover.html" class="dropdown-item">Mount Meru</a>
+                                    </div>
+                                </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                           
@@ -123,17 +142,16 @@
         </div>
         <!-- Header End -->
 
-
         <!-- Page Header Start -->
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(images/kili.webp);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Kilimanjaro Route</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                            <li class="breadcrumb-item"><a href="#">route</a></li>
+                            <!-- <li class="breadcrumb-item text-white active" aria-current="page">About</li> -->
                         </ol>
                     </nav>
                 </div>
@@ -142,269 +160,75 @@
         <!-- Page Header End -->
 
 
-        <!-- Booking Start -->
         
-        <!-- Booking End -->
-
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-12">
-                        <h6 class="section-title text-start text-primary text-uppercase">Kilimanjaro</h6>
-                        </h1>
-
-                        <p class="mb-4"> 
-                            
-                           <div class="p-2"> <h4>MOUNT KILIMANJARO ROUTES</h4>
-                                =>There are six established routes to climb Mount Kilimanjaro – Marangu, Machame, Lemosho, Shira, Rongai and Umbwe. The Marangu, Machame, and Umbwe routes all approach from the south of the mountain. The Lemosho and Shira routes approach from the west. The Rongai route approaches from the north. All routes except Marangu and Rongai descend via Mweka.
-                            </div>
-
-                        <div>
-                            Machame route 6 days - The Machame route, also known as the “Whiskey” route, is a six or seven day camping route and is most popular route on Kilimanjaro.
-                        </div>
-
-                            <br />
-                            <br />
-
-                            <button class="accordion">Section 1</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 2</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 3</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div> 
-
-                        <br />
-                        <br />
-
-    <div>
-    <p>
-        Day 0: Pre-trek Briefing. ...
-
-    </p>
-    <p>
-        Day 1: Hotel to Machame Camp. ...
-
-    </p>
-    <p>
-        Day 2: Machame Camp to Shira Camp. ...
-
-    </p>
-    <p>
-        Day 3: Shira Camp to Lava Tower to Barranco Camp. ...
-
-    </p>
-    <p>
-Day 4: Barranco Camp to Barafu Camp. ...
-
-    </p>
-    <p>
-        Day 5: Barafu Camp to Summit to Mweka Camp. ...
-
-    </p>
-    <p>
-        Day 6: Mweka Camp to Mweka Gate to Hotel.
-
-    </p>
-
-</div>
-
-<h4>=>LEMOSHO 7 DAY CLIMB</h4>
--The Lemosho route is lesser known.It begins on the western side of Kilimanjaro. Walking through the rainforest for the first two days the vegetation changes to heath and moorland with many ferns and ericas along the way. The narrow trail sometimes has some very steep sections and is scenically diverse. On the third day, the trail joins the Machame route. Hikers overnight in tents.
-Day 0: Pre-trek Briefing. ...
-<div>
-<p>
-    Day 1: Hotel to Mti Mkubwa Camp. ...
-
-</p>
-<p>
-    Day 2: Mti Mkubwa Camp to Shira 2 Camp. ...
-
-</p>
-<p>
-    Day 3: Shira 2 Camp to Barranco Camp. ...
-
-</p>
-<p>
-    Day 4: Barranco Camp to Karanga Camp. ...
-
-</p>
-<p>
-    Day 5: Karanga Camp to Barafu Camp. ...
-
-</p>
-<p>
-    Day 6: Barafu Camp to Summit to Mweka Camp. ...
-
-</p>
-<p>
-    Day 7: Mweka Camp to Mweka Gate to Hotel.
-
-</p>
-
-</div>
-
-<h4>=> Rongai route 7 days</h4>
-<p>
-    TREK DAY 1. Arusha to Rongai Gate to Simba Camp. ...
-</p>
-
-<p>
-    TREK DAY 2. Simba Camp to 2nd Cave Camp. ...
-</p>
-
-<p>
-    TREK DAY 3. 2nd Camp to Kikelewa Camp. ...
-</p>
-<p>
-    TREK DAY 4. Kikelewa Camp to Mawenzi Tarn Hut. ...
-</p>
-<p>
-    TREK DAY 5. Mawenzi Tarn Hut to Kibo hut. ...
-</p>
-<p>
-    TREK DAY 6. Kibo Hut to Gilman's Point to Uhuru Peak – Horombo Hutp. ...
-
-</p>
-<p>
-
-</p>
-
-<h4>=> Marangu route 6 days-</h4>
-
-<div>
-    The Marangu Route also known as the “Coca-Cola Route” is the oldest and most well established trekking route on Mount  Kilimanjaro, and it remains extremely popular mainly because it is the only route on the mountain that has hut accommodation for trekkers.
-
-    <p>
-        Day 1: Mandara Huts
-
-    </p>
-    <p>
-
-        Day 2: Mandara Huts – Horombo Huts
-    </p>
-    <p>
-        Day 3 Acclimatization Day
-
-    </p>
-    <p>
-        Day 4: Horombo Huts – Kibo Huts
-    </p>
-    <p>
-        Day 5 Kibo Huts – Gilman’s Point – Uhuru Peak – Horombo Huts
-    </p>
-    <p>
-        Day 6: Horombo Huts – Marangu Gate
-    </p>
 
     
 </div>
 
-<div>
-    
-<h4>UMBWE ROUTE – 6 DAYS</h4>
-<div>
+                 
 
-    => Umbwe route - Umbwe route is one of the shortest routes to the Southern Glaciers and the Western Breach and it’s the most hardest and challenging route on Mount Kilimanjaro.
-    <p>
-        DAY 1:  UMBWE GATE TO UMBWE CAVE CAMP
-
-    </p>
-    <p>
-        DAY 2:  UMBWE CAMP TO BARRANCO CAMP 
-
-    </p>
-    <p>
-        DAY 3: BARRANCO CAMP TO KARANGA CAMP 
-    </p>
-    <p>
-        DAY 4:  KARANGA CAMP TO BARAFU CAMP 
-    </p>
-    <p>
-        DAY 5: BARAFU CAMP TO SUMMIT TO MWEKA HUT 
-    </p>
-    <p>
-        DAY 6:  MWEKA CAMP TO HOTEL
-    </p>
-
-</div>
-</div>
-
-<div>
-    <h4>=> shira route -</h4>
-     The Shira route is one of the older Kilimanjaro routes, and is very similar to the Lemosho route. The only differences between them is the trail walked on first couple of days, and that the starting point of the Shira is higher.
-    The Shira route approaches the summit of Kilimanjaro from the west, starting at Morum Barrier. It starts relatively high above sea level and is therefore a less frequented route as it offers a poorer acclimatisation profile. The route requires you to camp.
-    <p>
-        Day 1: Morum Barrier to Shira 1 Camp
-
-    </p>
-    <p>
-    Day 2: Shira 1 Camp to Shira 2 Camp
-
-    </p>
-    <p>
-    Day 3: Shira 2 Camp to Lava Tower to Barranco Camp
-
-    </p>
-    <p>
-    Day 4: Barranco Camp to Karanga Camp
-
-    </p>
-    <p>
-    Day 5: Karanga to Barafu Camp
-
-    </p>
-    <p>
-        Day 6: Barafu Camp to Uhuru Peak to Mweka Camp
-
-    </p>
-    <p>
-        Day 7: Mweka Camp to Mweka Gate
-
-    </p>
-    
-</div>
-</p>
-                       
-                    
-                </div>
-            </div>
         </div>
-        <!-- About End -->
 
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
+            <div class="container">
+
+            <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
+                <a class="service-item1 rounded" href="marangu-detail.html">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <img src="images/marangu.jpeg"  class="w-100" style="border-radius: 5%;" />
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Marangu route</h5>
+                    <p class="text-body mb-0"> The Marangu Route is also known as the “Tourist Route” and the “Coca-Cola Route.” This is because Marangu is the most popular route on the mountain, and thus is considered “touristy” .. >> Readm more</p>
+                </a>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <a class="service-item1 rounded" href="machame-route.html">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <img src="images/machame.jpeg"  class="w-100" style="border-radius: 5%;" />
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Machame Route</h5>
+                    <p class="text-body mb-0"> 
+                        The Machame Route is known as the “Whiskey Route” in comparison to Marangu’s “Coca Cola Route”. This is because Machame is a more difficult route, and does not have sleeping huts for accomodation...
+                        .</p>
+                </a>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <a class="service-item1 rounded" href="longai-route.html">
+                    <div class="service-icon bg-transparent border rounded p-1">
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
+                            <img src="images/north.jpeg"  class="w-100" style="border-radius: 5%;" />
+                        </div>
+                    </div>
+                    <h5 class="mb-3"> Rongai Route</h5>
+                    <p class="text-body mb-0 text-sm"> 
+
+                        This Rongai trail separate at Second cave to Mawenzi peak. This trail join at Kibo hut camp or School hut camp with other trail come straight to Kibo or school hut... 
+
+
+                        <button class="btn ">Read more</button>
+                    </p>
+                </a>
+            </div>
+
+        </div>
         </div>
         <!-- Team End -->
 
 
-        <!-- Newsletter Start -->
-        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 border rounded p-1">
-                    <div class="border rounded text-center p-1">
-                        <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
-                            <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter Start -->
+     <br />
+     <br />
+     <br />
+     <br />
         
 
         <!-- Footer Start -->
@@ -418,9 +242,9 @@ Day 0: Pre-trek Briefing. ...
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kilimanjaro, TZ</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Soweto moshi,Kilimanjaro, TZ</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@bestnaturalwandor.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@bestnaturalwonders.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -434,23 +258,20 @@ Day 0: Pre-trek Briefing. ...
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <a class="btn btn-link" href="">About Us</a>
                                 <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Tour site</h6>
-                                <a class="btn btn-link" href="">Kilimanjaro tour</a>
-                                <a class="btn btn-link" href="">Serengeti</a>
-                                <a class="btn btn-link" href="">Meru national park</a>
-                                <a class="btn btn-link" href="">Oldonyo lengai</a>
-                                <a class="btn btn-link" href="">Zanzibar</a>
+                                <a class="btn btn-link" href="kilimanjaro-route.html">Kilimanjaro tour</a>
+                                <a class="btn btn-link" href="serengeti.html">Serengeti</a>
+                                <a class="btn btn-link" href="meru-cover.html">Meru national park</a>
+                                <a class="btn btn-link" href="oldonyo.html">Oldonyo lengai</a>
+                                <a class="btn btn-link" href="zanzibar.html">Zanzibar</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container d-none">
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
@@ -471,7 +292,6 @@ Day 0: Pre-trek Briefing. ...
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
 
         <!-- Back to Top -->

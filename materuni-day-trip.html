@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BNW - best natural wondors</title>
+    <title>BNW - best natural wonders</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,6 +58,144 @@
         overflow: hidden;
         }
 
+
+        .container{
+            display: flex;
+        
+
+        }
+
+        .item{
+            border:2px dotted orange;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+
+        /* accodian */
+
+
+
+body {
+  /* background: #734f79; */
+  font-family: 'Flamenco', serif;
+}
+
+h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.readme {
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  
+  
+}
+.readme > a {
+    color: #00a486;
+  }
+
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+  position: relative;
+  margin: 60px auto;
+  width: 80%;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #00a486;
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion > a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #fff;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+
+/* end accordian */
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }   
+}
+
+
+
+
     </style>
 </head>
 
@@ -87,8 +225,10 @@
                                 <p class="mb-0">info@bestnaturalwandor.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
-                                <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+255 345 6789</p>
+                                <a href="https://wa.me/255 764 549 581?text=Welcome to best natural wonders">
+                                    <i class="fa fa-phone-alt text-primary me-2"></i>
+                                    <p class="mb-0">+255 764 549 581</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -112,7 +252,14 @@
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link active">About</a>
-                                <a href="service.html" class="nav-item nav-link">Tours</a>
+                                <!-- <a href="service.html" class="nav-item nav-link">Tours</a> -->
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tour</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="kilimanjaro-route.html" class="dropdown-item">Kilimanjaro Routes</a>
+                                        <a href="meru-cover.html" class="dropdown-item">Mount Meru</a>
+                                    </div>
+                                </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                           
@@ -128,12 +275,12 @@
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(images/kili.webp);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Materuni Water fall day trip</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">day-trip</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">treking</li> -->
                         </ol>
                     </nav>
                 </div>
@@ -142,255 +289,87 @@
         <!-- Page Header End -->
 
 
-        <!-- Booking Start -->
         
-        <!-- Booking End -->
-
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-12">
-                        <h6 class="section-title text-start text-primary text-uppercase">Kilimanjaro</h6>
-                        </h1>
-
-                        <p class="mb-4"> 
-                            
-                           <div class="p-2"> <h4>MOUNT KILIMANJARO ROUTES</h4>
-                                =>There are six established routes to climb Mount Kilimanjaro – Marangu, Machame, Lemosho, Shira, Rongai and Umbwe. The Marangu, Machame, and Umbwe routes all approach from the south of the mountain. The Lemosho and Shira routes approach from the west. The Rongai route approaches from the north. All routes except Marangu and Rongai descend via Mweka.
-                            </div>
-
-                        <div>
-                            Machame route 6 days - The Machame route, also known as the “Whiskey” route, is a six or seven day camping route and is most popular route on Kilimanjaro.
-                        </div>
-
-                            <br />
-                            <br />
-
-                            <button class="accordion">Section 1</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 2</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 3</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div> 
-
-                        <br />
-                        <br />
-
-    <div>
-    <p>
-        Day 0: Pre-trek Briefing. ...
-
-    </p>
-    <p>
-        Day 1: Hotel to Machame Camp. ...
-
-    </p>
-    <p>
-        Day 2: Machame Camp to Shira Camp. ...
-
-    </p>
-    <p>
-        Day 3: Shira Camp to Lava Tower to Barranco Camp. ...
-
-    </p>
-    <p>
-Day 4: Barranco Camp to Barafu Camp. ...
-
-    </p>
-    <p>
-        Day 5: Barafu Camp to Summit to Mweka Camp. ...
-
-    </p>
-    <p>
-        Day 6: Mweka Camp to Mweka Gate to Hotel.
-
-    </p>
-
-</div>
-
-<h4>=>LEMOSHO 7 DAY CLIMB</h4>
--The Lemosho route is lesser known.It begins on the western side of Kilimanjaro. Walking through the rainforest for the first two days the vegetation changes to heath and moorland with many ferns and ericas along the way. The narrow trail sometimes has some very steep sections and is scenically diverse. On the third day, the trail joins the Machame route. Hikers overnight in tents.
-Day 0: Pre-trek Briefing. ...
-<div>
-<p>
-    Day 1: Hotel to Mti Mkubwa Camp. ...
-
-</p>
-<p>
-    Day 2: Mti Mkubwa Camp to Shira 2 Camp. ...
-
-</p>
-<p>
-    Day 3: Shira 2 Camp to Barranco Camp. ...
-
-</p>
-<p>
-    Day 4: Barranco Camp to Karanga Camp. ...
-
-</p>
-<p>
-    Day 5: Karanga Camp to Barafu Camp. ...
-
-</p>
-<p>
-    Day 6: Barafu Camp to Summit to Mweka Camp. ...
-
-</p>
-<p>
-    Day 7: Mweka Camp to Mweka Gate to Hotel.
-
-</p>
-
-</div>
-
-<h4>=> Rongai route 7 days</h4>
-<p>
-    TREK DAY 1. Arusha to Rongai Gate to Simba Camp. ...
-</p>
-
-<p>
-    TREK DAY 2. Simba Camp to 2nd Cave Camp. ...
-</p>
-
-<p>
-    TREK DAY 3. 2nd Camp to Kikelewa Camp. ...
-</p>
-<p>
-    TREK DAY 4. Kikelewa Camp to Mawenzi Tarn Hut. ...
-</p>
-<p>
-    TREK DAY 5. Mawenzi Tarn Hut to Kibo hut. ...
-</p>
-<p>
-    TREK DAY 6. Kibo Hut to Gilman's Point to Uhuru Peak – Horombo Hutp. ...
-
-</p>
-<p>
-
-</p>
-
-<h4>=> Marangu route 6 days-</h4>
-
-<div>
-    The Marangu Route also known as the “Coca-Cola Route” is the oldest and most well established trekking route on Mount  Kilimanjaro, and it remains extremely popular mainly because it is the only route on the mountain that has hut accommodation for trekkers.
-
-    <p>
-        Day 1: Mandara Huts
-
-    </p>
-    <p>
-
-        Day 2: Mandara Huts – Horombo Huts
-    </p>
-    <p>
-        Day 3 Acclimatization Day
-
-    </p>
-    <p>
-        Day 4: Horombo Huts – Kibo Huts
-    </p>
-    <p>
-        Day 5 Kibo Huts – Gilman’s Point – Uhuru Peak – Horombo Huts
-    </p>
-    <p>
-        Day 6: Horombo Huts – Marangu Gate
-    </p>
 
     
 </div>
 
-<div>
-    
-<h4>UMBWE ROUTE – 6 DAYS</h4>
-<div>
+                 
 
-    => Umbwe route - Umbwe route is one of the shortest routes to the Southern Glaciers and the Western Breach and it’s the most hardest and challenging route on Mount Kilimanjaro.
-    <p>
-        DAY 1:  UMBWE GATE TO UMBWE CAVE CAMP
-
-    </p>
-    <p>
-        DAY 2:  UMBWE CAMP TO BARRANCO CAMP 
-
-    </p>
-    <p>
-        DAY 3: BARRANCO CAMP TO KARANGA CAMP 
-    </p>
-    <p>
-        DAY 4:  KARANGA CAMP TO BARAFU CAMP 
-    </p>
-    <p>
-        DAY 5: BARAFU CAMP TO SUMMIT TO MWEKA HUT 
-    </p>
-    <p>
-        DAY 6:  MWEKA CAMP TO HOTEL
-    </p>
-
-</div>
-</div>
-
-<div>
-    <h4>=> shira route -</h4>
-     The Shira route is one of the older Kilimanjaro routes, and is very similar to the Lemosho route. The only differences between them is the trail walked on first couple of days, and that the starting point of the Shira is higher.
-    The Shira route approaches the summit of Kilimanjaro from the west, starting at Morum Barrier. It starts relatively high above sea level and is therefore a less frequented route as it offers a poorer acclimatisation profile. The route requires you to camp.
-    <p>
-        Day 1: Morum Barrier to Shira 1 Camp
-
-    </p>
-    <p>
-    Day 2: Shira 1 Camp to Shira 2 Camp
-
-    </p>
-    <p>
-    Day 3: Shira 2 Camp to Lava Tower to Barranco Camp
-
-    </p>
-    <p>
-    Day 4: Barranco Camp to Karanga Camp
-
-    </p>
-    <p>
-    Day 5: Karanga to Barafu Camp
-
-    </p>
-    <p>
-        Day 6: Barafu Camp to Uhuru Peak to Mweka Camp
-
-    </p>
-    <p>
-        Day 7: Mweka Camp to Mweka Gate
-
-    </p>
-    
-</div>
-</p>
-                       
-                    
-                </div>
-            </div>
         </div>
         <!-- About End -->
 
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
+            <div class="container">
+
+            <div class="col-lg-6 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
+                   
+                
+                    <p class="text-body mb-0"> 
+                        <h2 style="color:'black">Materuni Water fall day trip</h2>
+                        <br>
+
+                        <img src="images/materuni1.jpeg"  class="w-100" height="200px" style="border-radius: 2%; object-fit: cover; aspect-ratio: 100/100;" />
+
+                        <br />
+                        <br />
+
+                        <img src="images/materuni2.jpeg"  class="w-100" height="200px" style="border-radius: 2%; object-fit: cover; aspect-ratio: 100/100;" />
+
+
+
+                    </p>
+
+                    <br />
+                    <br />
+            </div>
+
+
+
+
+           
+
+
+            <div class="col-lg-5 col-md-6 wow fadeInUp p-2" data-wow-delay="0.4s">
+                
+               <div>
+                <h3>Trip Overview</h3>
+                <p style="text-align: justify;padding:10px"> 
+
+                    Materuni is just 15km away from Moshi Town and is the last village before the Kilimanjaro National Park. The waterfall, named after the village is an immense and powerful waterfall that's definately worth the visit when you're in Tanzania. From Arusha, the trip will take about 2 hours and just half an hour from Moshi
+
+                    <br />
+                    <br />
+
+                    A tour to Materuni Village and Waterfalls is a great way to spend a day away from the bustle of town life. The walk to Materuni Waterfall offers a glimpse into the nature of Tanzania allowing you either to prepare your body for the forthcoming climb to Kilimanjaro or ease your muscles after the climb.
+                    <br />
+                    <br />
+
+                    The tour starts with a walk to Materuni Waterfall. It is an opportunity to see how local fruit like avocados, mangos, lemons, and bananas grow, as well as learn some of the local history, traditions, village economy, agricultural and cultural life. When you get to the waterfall, you can refresh yourself in the natural pool, so swimsuits will come in handy!
+
+                    <br />
+                    <br />
+
+                    The tour will continue with a visit to the local village lying in the coffee plantations. The villagers will demonstrate the process of coffee farming and guide you through the preparation of coffee from a bean to a cup. Sing and dance along with the Chaga people as they are grinding, roasting and boiling the beans. When the coffee is ready, villagers will serve lunch - a national Chagga meal.
+                    </p>
+               </div>
+                    
+
+                        
+            </div>
+
+
+
+        </div>
         </div>
         <!-- Team End -->
 
 
         <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
@@ -402,7 +381,7 @@ Day 0: Pre-trek Briefing. ...
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- Newsletter Start -->
         
@@ -471,7 +450,6 @@ Day 0: Pre-trek Briefing. ...
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
 
         <!-- Back to Top -->
@@ -490,7 +468,6 @@ Day 0: Pre-trek Briefing. ...
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
 

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BNW - best natural wonders</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * Style the buttons that are used to open and close the accordion panel */
+        .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active, .accordion:hover {
+        background-color: #ccc;
+        }
+
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+        padding: 0 18px;
+        background-color: white;
+        display: none;
+        overflow: hidden;
+        }
+
+
+        .container{
+            display: flex;
+        
+
+        }
+
+        .item{
+            border:2px dotted orange;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+
+        /* accodian */
+
+
+
+body {
+  /* background: #734f79; */
+  font-family: 'Flamenco', serif;
+}
+
+h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.readme {
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  
+  
+}
+.readme > a {
+    color: #00a486;
+  }
+
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+  position: relative;
+  margin: 60px auto;
+  width: 80%;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #00a486;
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion > a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #fff;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+
+
+
+        /* end accordian */
+
+        @media screen and (max-width:768px){
+        .container{
+            flex-direction: column;
+
+        }
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-dark px-0">
+            <div class="row gx-0">
+                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <h1 class="m-0 text-primary text-uppercase">BNW</h1>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                        <div class="col-lg-7 px-5 text-start">
+                            <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                                <i class="fa fa-envelope text-primary me-2"></i>
+                                <p class="mb-0">info@bestnaturalwandor.com</p>
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2">
+                                <a href="https://wa.me/255 764 549 581?text=Welcome to best natural wonders">
+                                    <i class="fa fa-phone-alt text-primary me-2"></i>
+                                    <p class="mb-0">+255 764 549 581</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center py-2">
+                                <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="" href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase">BNW</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="index.html" class="nav-item nav-link">Home</a>
+                                <a href="about.html" class="nav-item nav-link active">About</a>
+                                <!-- <a href="service.html" class="nav-item nav-link">Tours</a> -->
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tour</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="kilimanjaro-route.html" class="dropdown-item">Kilimanjaro Routes</a>
+                                        <a href="meru-cover.html" class="dropdown-item">Mount Meru</a>
+                                    </div>
+                                </div>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+                          
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(images/kili.webp);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Machame Route</h1>
+                    <nav aria-label="breadcrumb">
+                        <!-- <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">marangu</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">treking</li>
+                        </ol> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        
+
+    
+</div>
+
+                 
+
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+
+            <div class="col-lg-6 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
+                   
+                
+
+                    <p class="text-body mb-0"> 
+
+                        <h2>Machame route</h2>
+                        <br>
+                        <p>7 Days itenary</p>
+
+                        The Machame route, also referred to as the Whiskey route, is one of the most popular routes on Kilimanjaro. Despite being a tough climb compared to the Marangu route, the Machame route has one of the highest summit success rates given the topography of the route which allows climbers to “trek high & sleep low” hence making it a more favorable route for acclimatization. This route offers some of the most spectacular scenery while on the mountain. The Machame route starts in the south west side of the mountain and proceeds steeply north, traversing the Shira plateau and eventually joining the Shira and Lemosho routes at the Shira camp. The Machame route can be done in minimum 6 days but a 7 day trek is recommended so climbers are well rested and acclimatized before making the final ascent to the summit.
+
+                        <br>
+                        <br>
+
+                        The trek begins in the south-east area of the mountain at Marangu Gate. The route takes five days minimum to complete, although six days is more practical and recommended. The sleeping huts along the route are structures with a dining hall and bunk beds, equipped with mattresses and pillows. The descent is done on the same path, contributing to Marangu’s overcrowded feeling. It is a cheaper climb as well, do to the close proximity of the gate to Moshi, the gateway town, and because it is a shorter route.
+
+                        <br>
+                        <br>
+
+<!-- 
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                            <img src="images/marangu1.jpg"  class="w-100" style="border-radius: 2%;" />
+                        <!-- </div> -->
+
+
+                    </p>
+            </div>
+
+
+
+
+           
+
+
+            <div class="col-lg-5 col-md-6 wow fadeInUp p-2" data-wow-delay="0.4s">
+                
+                <!-- start accordian -->
+
+                <div class="accordion">
+                    <!-- span to target fix closing accordion -->
+                    <span class="target-fix" id="accordion"></span>
+                     
+                    <!-- First Accoridon Option -->
+                    <div>
+                        <!-- span to target fix accordion -->
+                        <span class="target-fix" id="accordion1"></span>
+                        
+                        <!-- Link to open accordion, hidden when open --> 
+                        <a href="#accordion1" id="open-accordion1" title="open">
+                            6 days Machame route
+                        </a>
+                        
+                        <!-- Link to close accordion, hidden when closed -->
+                        <a href="#accordion" id="close-accordion1" title="close">6 day machame route</a> 
+                        
+                        <!-- Accorion content goes in this div -->
+                        <div class="accordion-content">
+                            <div>
+                                <h5>DAY 0</h5>
+                        <p class="item">
+                                Arrival, Pickup at Kilimanjaro Airport and drive to Arusha Safari Lodge 30 minutes. Overnight stay based on bed and breakfast.
+                                </p>
+
+                            DAY 1
+
+                            <p class="item">
+                                The morning after breakfast with packed picnic lunch from Arusha Safari Lodge around 10:00, drive to Machame Park gate 1 hour. After check-in, start walking to the Machame hut campsite. The Machame route is the closest route from Arusha town or Moshi town. This is the best camping route among others. Great scenery and lush and huge rainforest make this route unique. The walk in the forest takes about 2hrs. Dinner and overnight at Machame hut campsite 2,835m. Full board basis.
+                            </p>
+
+
+                            <div>
+                            DAY 2
+                            <p class="item">
+
+                                The morning after breakfast with packed picnic lunch; continue walking to Shira cave campsite. The day is clear, walking on the heather and moorland zone. Today the trail is a bit steep. Two peaks Shira and Kibo seen well. Get a great view of Mount Meru in Arusha as well. The walks take about 4-5 hours. Dinner and overnight at Shira cave campsite 3,750m. Full board basis.
+
+                            </p>
+                        </div>
+
+                        <div>
+
+                            DAY 3
+                            <div class="item">
+
+                                The morning after breakfast with packed picnic lunch continues walking east side facing the mountain. The day is chill and passing through the alpine desert. Get a picnic lunch at Lava tower 4,600m. After lunch descends to baranco camp. The walk takes about 6hrs. Overnight stay at Baranco campsite 3,900m. Full board basis.
+
+                        </div>
+
+                        </div>
+
+
+                        <div>
+                            DAY 4
+                            <p class="item">
+
+                                The morning after breakfast with packed picnic lunch, walk to Barafu camp. Soon after starting the hike, enjoy climbing the baranco wall. This wall has a nickname from Porters known as Breakfast. This means once you start to climb, you must get warm as has a few areas where you climb. After this wall, continue walking to Karanga Camp where you will get a picnic lunch. After lunch continues ascending to Barafu camp. It takes 6 hours total from Baranco to barafu camp. Overnight stay at Barafu camp 4,673m full board basis.
+
+                        </p>
+                        </div>
+
+
+                        <div>
+                            DAY 5
+                            <p class="item">
+
+                                Midnight after refreshing tea with cookies starts walking to the summit. The day is tough and looking to make your dream come true. The walk to the summit takes about 6-7 hours. After arriving at the summit of UHURU PEAK 5,895m, take photos for about 20 minutes. After photos descend to Mweka camp via barafu camp. The walk down takes about 3 hours to Barafu camp. Relax for about 1 hour. Get breakfast. After breakfast continues walking down 3-4 hours to Mweka camp. Overnight stay at Mweka campsite 3,100m full board basis.
+
+                        </p>
+                        </div>
+
+                        <div>
+                            DAY 6   
+                            <p class="item">
+
+                                The morning after breakfast descends to Mweka Park gate for 2hrs. Meet the van and transfer to Arusha Safari Lodge for 2 hours. Overnight stay at House of west Kili Lodge Bed and breakfast. Please note; on day 7, our driver will pick you up at the lodge to Airport for your home flight, Zanzibar, or another destination like safari
+
+
+                        </p>
+                        </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Second Accoridon Option -->
+                    <div>
+                        <span class="target-fix" id="accordion2"></span>
+                        <a href="#accordion2" id="open-accordion2" title="open">7 Days machame route</a>
+                        <a href="#accordion" id="close-accordion2" title="close">7 days machame route</a>
+                        <div class="accordion-content">
+                            <p>7 days machame route.</p>   
+                            
+                        <a href="#accordion" id="close-accordion1" title="close">6 day machame route</a> 
+                            
+                            
+                            
+                            <div>
+                                <h2>Day 0</h2>
+                                <p>
+                                    Arrive at Kilimanjaro Airport. Meet with amazing welcomes from our driver and transfer to Arusha City 50 Minutes to one hour. You’ll check in at Tulia Boutique hotel and Spa. The hotel has a beautiful room, delicious meal, swimming pool and Spa. Your overnight in this hotel based on bed and breakfast.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2>Day 1</h2>
+                                <p>
+
+                                    Morning after breakfast with packed picnic lunch our team will pick you and drive to Machame Park gate 2hrs. Upon arrival, you’ll start walking slowly through heavy rainforest to Machame hut campsite. On the way you can see black and white Colobus Monkeys and blue Monkeys. Great scenery, lush and huge rain forest makes this route unique. The walk takes about 5-6 hrs. Overnight stay at Machame hut campsite 2,835m.
+
+                                </p>
+                            </div>
+
+
+
+                            <div>
+                                <h2>Day 2</h2>
+                                <p>
+
+                                    Morning after breakfast with packed picnic lunch, continue walking to Shira cave campsite. The day is clear, walking on the heather and moorland zone. Today the trail is a bit steep. Two peaks Shira and Kibo seen well. You’ll see perfect view of Mount Meru in Arusha as well. The walk takes about 4-5hrs. Overnight at Shira cave campsite 3,750m.
+
+                                </p>
+                            </div>
+
+
+                            <div>
+                                <h2>Day 3</h2>
+                                <p>
+
+                                    Morning after breakfast with packed picnic lunch continue walking east side facing Kibo peak. The day is chill crossing to the alpine desert. Get picnic lunch at Lava tower 4,600m. After lunch descend to the baranco camp. The walk today takes approximately 6-7hrs . Overnight at Baranco camp 3,900m.
+
+                                </p>
+                            </div>
+
+
+                            <div>
+                                <h2>Day 4</h2>
+                                <p>
+
+
+                                    Morning after breakfast with packed picnic lunch continue walking east side facing Kibo peak. The day is chill crossing to the alpine desert. Get picnic lunch at Lava tower 4,600m. After lunch descend to the baranco camp. The walk today takes approximately 6-7hrs . Overnight at Baranco camp 3,900m.
+
+                                </p>
+                            </div>
+
+
+                            <div>
+                                <h2>Day 5</h2>
+                                <p>
+                                    Morning after breakfast with picnic lunch continue walking to Barafu camp through alpine desert. The walk to barafu camp takes about 2-3hrs. Overnight at Barafu camp 4,673m.
+                                </p>
+                            </div>
+
+
+
+                            <div>
+                                <h2>Day 6</h2>
+                                <p>
+
+                                    Midnight after refreshing tea with cookies, start walking for the summit. This is a bit challenging day looking to make your dream come true. The walk to the summit takes about 6-7hrs. After arriving on the summit of Mount Kilimanjaro UHURU PEAK 5,895m, take photos for about 20 minutes. After photos descends to Mweka camp via barafu camp. The walk down takes about 3 hours to Barafu camp. Relax for about 1 hour. Get breakfast. After breakfast continue walking down 3-4 hours to Mweka camp. Overnight at Mweka camp 3,100m.
+
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2>Day 7</h2>
+                                <p>
+                                    Morning after breakfast descends to Mweka Park gate under a beautiful rainforest for about 3-4 hours. After checking out the Park, meet Van and transfer to Arusha City 2 hours. Overnight at Tulia Boutique hotel and Spa. Please note. Day 8. our driver will pick you at the hotel and transfer to the Airport for your home flight or other destination.
+                                </p>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+            
+                    <!-- Third Accoridon Option -->
+                    <!-- <div>
+                        <span class="target-fix" id="accordion3"></span>
+                        <a href="#accordion3" id="open-accordion3" title="open">Third Accordion</a>
+                        <a href="#accordion" id="close-accordion3" title="close">Third Accordion</a>
+                        <div class="accordion-content">
+                            <p>Accordion 3 Content</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- end accordian -->
+                    
+
+                        
+            </div>
+
+
+
+        </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Newsletter Start -->
+        <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <!-- <div class="row justify-content-center">
+                <div class="col-lg-10 border rounded p-1">
+                    <div class="border rounded text-center p-1">
+                        <div class="bg-white rounded text-center p-5">
+                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                            <div class="position-relative mx-auto" style="max-width: 400px;">
+                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- Newsletter Start -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-primary rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">BNW</h1></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kilimanjaro, TZ</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@bestnaturalwandor.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="">Privacy Policy</a>
+                                <a class="btn btn-link" href="">Terms & Condition</a>
+                                <a class="btn btn-link" href="">Support</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Tour site</h6>
+                                <a class="btn btn-link" href="">Kilimanjaro tour</a>
+                                <a class="btn btn-link" href="">Serengeti</a>
+                                <a class="btn btn-link" href="">Meru national park</a>
+                                <a class="btn btn-link" href="">Oldonyo lengai</a>
+                                <a class="btn btn-link" href="">Zanzibar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">bestnaturalwonders</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

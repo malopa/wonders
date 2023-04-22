@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BNW - best natural wondors</title>
+    <title>BNW - best natural wonders</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -58,6 +58,148 @@
         overflow: hidden;
         }
 
+
+        .container{
+            display: flex;
+        
+
+        }
+
+        .item{
+            border:2px dotted orange;
+            padding: 5px;
+            border-radius: 5px;
+
+        }
+
+        /* accodian */
+
+
+
+body {
+  /* background: #734f79; */
+  font-family: 'Flamenco', serif;
+}
+
+h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.readme {
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  
+  
+}
+.readme > a {
+    color: #00a486;
+  }
+
+/*_________________  Accordion
+________________________________________*/
+.accordion {
+  position: relative;
+  margin: 60px auto;
+  width: 80%;
+}
+
+[id*="open-accordion"], [id*="close-accordion"] {
+  background: #00a486;
+  border-bottom: 1px solid #fff;
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 99%;
+}
+
+[id*="close-accordion"] {
+  display: none;
+}
+
+.accordion > a {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: normal;
+  padding-left: 2%;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+[id*="open-accordion"]:after, [id*="close-accordion"]:after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+.target-fix {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.accordion-content {
+  background: #fff;
+  height: 0;
+  margin: -1px auto 0;
+  padding: 0 2.5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+}
+
+.accordion span:target ~ .accordion-content {
+  display: block;
+  height: auto;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.accordion span:target ~ [id*="close-accordion"] {
+  display: block;
+}
+
+.accordion span:target ~ [id*="open-accordion"] {
+  display: none;
+}
+
+.accordion span:target ~ [id*="close-accordion"]:after {
+  border-top: 10px solid #333;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+
+
+
+        /* end accordian */
+
+        @media screen and (max-width:768px){
+        .container{
+            flex-direction: column;
+
+        }
+        }
+
+
+
+
     </style>
 </head>
 
@@ -87,8 +229,10 @@
                                 <p class="mb-0">info@bestnaturalwandor.com</p>
                             </div>
                             <div class="h-100 d-inline-flex align-items-center py-2">
-                                <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+255 345 6789</p>
+                                <a href="https://wa.me/255 764 549 581?text=Welcome to best natural wonders">
+                                    <i class="fa fa-phone-alt text-primary me-2"></i>
+                                    <p class="mb-0">+255 764 549 581</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-5 px-5 text-end">
@@ -112,7 +256,14 @@
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.html" class="nav-item nav-link">Home</a>
                                 <a href="about.html" class="nav-item nav-link active">About</a>
-                                <a href="service.html" class="nav-item nav-link">Tours</a>
+                                <!-- <a href="service.html" class="nav-item nav-link">Tours</a> -->
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tour</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="kilimanjaro-route.html" class="dropdown-item">Kilimanjaro Routes</a>
+                                        <a href="meru-cover.html" class="dropdown-item">Mount Meru</a>
+                                    </div>
+                                </div>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                           
@@ -128,12 +279,12 @@
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(images/kili.webp);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Marangu Route</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                            <li class="breadcrumb-item"><a href="#">marangu</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">treking</li>
                         </ol>
                     </nav>
                 </div>
@@ -142,255 +293,173 @@
         <!-- Page Header End -->
 
 
-        <!-- Booking Start -->
         
-        <!-- Booking End -->
-
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-12">
-                        <h6 class="section-title text-start text-primary text-uppercase">Kilimanjaro</h6>
-                        </h1>
-
-                        <p class="mb-4"> 
-                            
-                           <div class="p-2"> <h4>MOUNT KILIMANJARO ROUTES</h4>
-                                =>There are six established routes to climb Mount Kilimanjaro – Marangu, Machame, Lemosho, Shira, Rongai and Umbwe. The Marangu, Machame, and Umbwe routes all approach from the south of the mountain. The Lemosho and Shira routes approach from the west. The Rongai route approaches from the north. All routes except Marangu and Rongai descend via Mweka.
-                            </div>
-
-                        <div>
-                            Machame route 6 days - The Machame route, also known as the “Whiskey” route, is a six or seven day camping route and is most popular route on Kilimanjaro.
-                        </div>
-
-                            <br />
-                            <br />
-
-                            <button class="accordion">Section 1</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 2</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div>
-                            
-                            <button class="accordion">Section 3</button>
-                            <div class="panel">
-                            <p>Lorem ipsum...</p>
-                            </div> 
-
-                        <br />
-                        <br />
-
-    <div>
-    <p>
-        Day 0: Pre-trek Briefing. ...
-
-    </p>
-    <p>
-        Day 1: Hotel to Machame Camp. ...
-
-    </p>
-    <p>
-        Day 2: Machame Camp to Shira Camp. ...
-
-    </p>
-    <p>
-        Day 3: Shira Camp to Lava Tower to Barranco Camp. ...
-
-    </p>
-    <p>
-Day 4: Barranco Camp to Barafu Camp. ...
-
-    </p>
-    <p>
-        Day 5: Barafu Camp to Summit to Mweka Camp. ...
-
-    </p>
-    <p>
-        Day 6: Mweka Camp to Mweka Gate to Hotel.
-
-    </p>
-
-</div>
-
-<h4>=>LEMOSHO 7 DAY CLIMB</h4>
--The Lemosho route is lesser known.It begins on the western side of Kilimanjaro. Walking through the rainforest for the first two days the vegetation changes to heath and moorland with many ferns and ericas along the way. The narrow trail sometimes has some very steep sections and is scenically diverse. On the third day, the trail joins the Machame route. Hikers overnight in tents.
-Day 0: Pre-trek Briefing. ...
-<div>
-<p>
-    Day 1: Hotel to Mti Mkubwa Camp. ...
-
-</p>
-<p>
-    Day 2: Mti Mkubwa Camp to Shira 2 Camp. ...
-
-</p>
-<p>
-    Day 3: Shira 2 Camp to Barranco Camp. ...
-
-</p>
-<p>
-    Day 4: Barranco Camp to Karanga Camp. ...
-
-</p>
-<p>
-    Day 5: Karanga Camp to Barafu Camp. ...
-
-</p>
-<p>
-    Day 6: Barafu Camp to Summit to Mweka Camp. ...
-
-</p>
-<p>
-    Day 7: Mweka Camp to Mweka Gate to Hotel.
-
-</p>
-
-</div>
-
-<h4>=> Rongai route 7 days</h4>
-<p>
-    TREK DAY 1. Arusha to Rongai Gate to Simba Camp. ...
-</p>
-
-<p>
-    TREK DAY 2. Simba Camp to 2nd Cave Camp. ...
-</p>
-
-<p>
-    TREK DAY 3. 2nd Camp to Kikelewa Camp. ...
-</p>
-<p>
-    TREK DAY 4. Kikelewa Camp to Mawenzi Tarn Hut. ...
-</p>
-<p>
-    TREK DAY 5. Mawenzi Tarn Hut to Kibo hut. ...
-</p>
-<p>
-    TREK DAY 6. Kibo Hut to Gilman's Point to Uhuru Peak – Horombo Hutp. ...
-
-</p>
-<p>
-
-</p>
-
-<h4>=> Marangu route 6 days-</h4>
-
-<div>
-    The Marangu Route also known as the “Coca-Cola Route” is the oldest and most well established trekking route on Mount  Kilimanjaro, and it remains extremely popular mainly because it is the only route on the mountain that has hut accommodation for trekkers.
-
-    <p>
-        Day 1: Mandara Huts
-
-    </p>
-    <p>
-
-        Day 2: Mandara Huts – Horombo Huts
-    </p>
-    <p>
-        Day 3 Acclimatization Day
-
-    </p>
-    <p>
-        Day 4: Horombo Huts – Kibo Huts
-    </p>
-    <p>
-        Day 5 Kibo Huts – Gilman’s Point – Uhuru Peak – Horombo Huts
-    </p>
-    <p>
-        Day 6: Horombo Huts – Marangu Gate
-    </p>
 
     
 </div>
 
-<div>
-    
-<h4>UMBWE ROUTE – 6 DAYS</h4>
-<div>
+                 
 
-    => Umbwe route - Umbwe route is one of the shortest routes to the Southern Glaciers and the Western Breach and it’s the most hardest and challenging route on Mount Kilimanjaro.
-    <p>
-        DAY 1:  UMBWE GATE TO UMBWE CAVE CAMP
-
-    </p>
-    <p>
-        DAY 2:  UMBWE CAMP TO BARRANCO CAMP 
-
-    </p>
-    <p>
-        DAY 3: BARRANCO CAMP TO KARANGA CAMP 
-    </p>
-    <p>
-        DAY 4:  KARANGA CAMP TO BARAFU CAMP 
-    </p>
-    <p>
-        DAY 5: BARAFU CAMP TO SUMMIT TO MWEKA HUT 
-    </p>
-    <p>
-        DAY 6:  MWEKA CAMP TO HOTEL
-    </p>
-
-</div>
-</div>
-
-<div>
-    <h4>=> shira route -</h4>
-     The Shira route is one of the older Kilimanjaro routes, and is very similar to the Lemosho route. The only differences between them is the trail walked on first couple of days, and that the starting point of the Shira is higher.
-    The Shira route approaches the summit of Kilimanjaro from the west, starting at Morum Barrier. It starts relatively high above sea level and is therefore a less frequented route as it offers a poorer acclimatisation profile. The route requires you to camp.
-    <p>
-        Day 1: Morum Barrier to Shira 1 Camp
-
-    </p>
-    <p>
-    Day 2: Shira 1 Camp to Shira 2 Camp
-
-    </p>
-    <p>
-    Day 3: Shira 2 Camp to Lava Tower to Barranco Camp
-
-    </p>
-    <p>
-    Day 4: Barranco Camp to Karanga Camp
-
-    </p>
-    <p>
-    Day 5: Karanga to Barafu Camp
-
-    </p>
-    <p>
-        Day 6: Barafu Camp to Uhuru Peak to Mweka Camp
-
-    </p>
-    <p>
-        Day 7: Mweka Camp to Mweka Gate
-
-    </p>
-    
-</div>
-</p>
-                       
-                    
-                </div>
-            </div>
         </div>
         <!-- About End -->
 
 
         <!-- Team Start -->
         <div class="container-xxl py-5">
+            <div class="container">
+
+            <div class="col-lg-6 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.4s">
+                   
+                
+
+                    <p class="text-body mb-0"> 
+
+                        <h1>marangu route</h1>
+                        <br>
+                        <p>5 Days itenary</p>
+                        Marangu is the easiest route on Mount Kilimanjaro. It’s ascension profile is very gradual and steady, allowing for painless trekking for most of the way. However, due to its reputation as an easy route, Marangu is often selected by unprepared, unexperienced climbers. Correspondingly, only about 35% of the people actually make it to the top.
+
+                        <br>
+                        <br>
+
+                        The trek begins in the south-east area of the mountain at Marangu Gate. The route takes five days minimum to complete, although six days is more practical and recommended. The sleeping huts along the route are structures with a dining hall and bunk beds, equipped with mattresses and pillows. The descent is done on the same path, contributing to Marangu’s overcrowded feeling. It is a cheaper climb as well, do to the close proximity of the gate to Moshi, the gateway town, and because it is a shorter route.
+
+                        <br>
+                        <br>
+
+<!-- 
+                        <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center"> -->
+                            <img src="images/marangu1.jpg"  class="w-100" style="border-radius: 2%;" />
+                        <!-- </div> -->
+
+
+                    </p>
+            </div>
+
+
+
+
+           
+
+
+            <div class="col-lg-5 col-md-6 wow fadeInUp p-2" data-wow-delay="0.4s">
+                
+                <!-- start accordian -->
+
+                <div class="accordion">
+                    <!-- span to target fix closing accordion -->
+                    <span class="target-fix" id="accordion"></span>
+                     
+                    <!-- First Accoridon Option -->
+                    <div>
+                        <!-- span to target fix accordion -->
+                        <span class="target-fix" id="accordion1"></span>
+                        
+                        <!-- Link to open accordion, hidden when open --> 
+                        <a href="#accordion1" id="open-accordion1" title="open">
+                            5 DAY MARANGU ITINERARY
+                        </a>
+                        
+                        <!-- Link to close accordion, hidden when closed -->
+                        <a href="#accordion" id="close-accordion1" title="close">5 DAY MARANGU ITINERARY</a> 
+                        
+                        <!-- Accorion content goes in this div -->
+                        <div class="accordion-content">
+                            <div>
+                                <h5>DAY 1</h5>
+                        <p class="item">
+
+                                We depart Moshi for Marangu Gate for the necessary formalities before beginning our trek. The hiking trail begins by ascending a beautiful, tropical rain forest. At the upper edge of the forest line, we have the opportunity to see blue monkeys. The trail then widens to expose beautiful hillsides until we reach Mandara Hut.
+                                </p>
+
+                            DAY 2
+
+                            <p class="item">
+
+                            Mandara Hut to Horombo Hut<br />
+                            Elevation (ft): 8,858 ft to 12,205 ft<br />
+                            Distance: 12 km<br />
+                            Hiking Time: 6-8 hours<br />
+                            Habitat: Heath<br /><br />
+
+                            We start the day continuing through the forest until the trail opens into high moorland. We may get our first views of Kibo and Mawenzi peaks – two of the three volcanic peaks that make up the summit of Kilimanjaro.
+                            </p>
+
+
+                            <div>
+                            DAY 3
+                            <p class="item">
+
+                                Horombo Hut to Kibo Hut<br />
+                                Elevation (ft): 12,205 ft to 15,430 ft<br />
+                                Distance: 10 km<br />
+                                Hiking Time: 6-8 hours<br />
+                                Habitat: Alpine Desert<br />
+
+                                We climb gradually, then cross the lunar desert of the “Saddle” between Mawenzi and Kibo. Our camp, Kibo Hut, sits at the bottom of the Kibo crater wall. Once here we rest, enjoy an early dinner to prepare for the summit day.
+                            </p>
+                        </div>
+
+                        <div>
+
+                            DAY 4
+                            <div class="item">
+                            Very early in the morning (around midnight), we begin our push to the summit. This is the most mentally and physically challenging portion of the trek. The wind and cold at this elevation and time of day can be extreme. We ascend in the darkness for several hours while taking frequent, but short, breaks. At Gilman’s point (18,600 ft), you will be rewarded with the most magnificent sunrise you are ever likely to see coming over Mawenzi Peak. Finally, we arrive at Uhuru Peak- the highest point on Mount Kilimanjaro and the continent of Africa.
+
+                            After spending a few moments taking in the plains of Africa and your accomplishment, we descend to Horombo Hut. Later in the evening, we enjoy our last dinner on the mountain and a well-earned sleep.
+                        </div>
+
+                        </div>
+
+
+                            <div>
+                            DAY 5
+                            <p class="item">
+                            On our last day, we have a long trek mostly downhill through the tropical rainforest. Once at the park headquarters at Marangu gate, we collect our summit certificates. A vehicle will meet us here and drive us back to the hotel in Moshi.
+                        </p>
+                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Second Accoridon Option -->
+                    <div>
+                        <span class="target-fix" id="accordion2"></span>
+                        <a href="#accordion2" id="open-accordion2" title="open">5 DAY MARANGU ITINERARY</a>
+                        <a href="#accordion" id="close-accordion2" title="close">5 DAY MARANGU ITINERARY</a>
+                        <div class="accordion-content">
+                            <p>Accordion 2 Content.</p>       
+                        </div>
+                    </div>
+            
+                    <!-- Third Accoridon Option -->
+                    <div>
+                        <span class="target-fix" id="accordion3"></span>
+                        <a href="#accordion3" id="open-accordion3" title="open">Third Accordion</a>
+                        <a href="#accordion" id="close-accordion3" title="close">Third Accordion</a>
+                        <div class="accordion-content">
+                            <p>Accordion 3 Content</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end accordian -->
+                    
+
+                        
+            </div>
+
+
+
+        </div>
         </div>
         <!-- Team End -->
 
 
         <!-- Newsletter Start -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
@@ -402,7 +471,7 @@ Day 0: Pre-trek Briefing. ...
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- Newsletter Start -->
         
@@ -471,7 +540,6 @@ Day 0: Pre-trek Briefing. ...
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
 
         <!-- Back to Top -->
